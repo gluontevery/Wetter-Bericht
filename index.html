@@ -13,61 +13,66 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>My weather application</title>
   </head>
-  <body>
-    <div class="weather-app">
-      <header>
-        <form id="search-form">
-          <input
-            type="search"
-            placeholder="Enter a city.."
-            required
-            class="search-input"
-          />
-          <input type="submit" value="Search" class="search-button" />
-        </form>
-      </header>
-      <main>
-        <div class="current-weather" id="day-forecast">
-          <div>
-            <h1 class="current-city">Paris</h1>
-            <p class="current-details">
-              Saturday 15:32, moderate rain <br />
-              Humidity: <strong>87%</strong>, Wind: <strong>7.2km/h</strong>
-            </p>
-          </div>
-          <div class="current-temperature">
+  <body id="global">
+    <div class="video-wrapper">
+      <video autoplay muted loop class="video-bkgd" id="video-background">
+        <source src="src/images/sky.mp4" type="video/mp4" />
+      </video>
+      <div class="weather-app">
+        <header>
+          <form id="search-form">
+            <input
+                    type="search"
+                    placeholder="Enter a city.."
+                    required
+                    class="search-input"
+            />
+            <input type="submit" value="Search" class="search-button" />
+          </form>
+        </header>
+        <main>
+          <div class="current-weather" id="day-forecast">
+            <div>
+              <h1 class="current-city">Paris</h1>
+              <p class="current-details">
+                Saturday 15:32, moderate rain <br />
+                Humidity: <strong>87%</strong>, Wind: <strong>7.2km/h</strong>
+              </p>
+            </div>
+            <div class="current-temperature">
             <span class="current-temperature-icon">☀️</span
             ><span class="current-temperature-value" id="currentTemp">24</span
             ><span class="current-temperature-unit">°C</span>
+            </div>
           </div>
-        </div>
-      </main>
-      <footer>
-        <p>
-          This project was coded by
-          <a
-            href="https://github.com/gluontevery"
-            target="_blank"
-            rel="noreferrer"
+        </main>
+        <footer>
+          <p>
+            This project was coded by
+            <a
+                    href="https://github.com/gluontevery"
+                    target="_blank"
+                    rel="noreferrer"
             >T. Tatarchuk</a
-          >
-          and is
-          <a
-            href="https://github.com/gluontevery/Wetter-Bericht"
-            target="_blank"
-            rel="noreferrer"
-          >
-            on GitHub</a
-          >
-          and
-          <a
-            href="https://scintillating-gingersnap-bc3585.netlify.app/"
-            target="_blank"
-            rel="noreferrer"
+            >
+            and is
+            <a
+                    href="https://github.com/gluontevery/Wetter-Bericht"
+                    target="_blank"
+                    rel="noreferrer"
+            >
+              on GitHub</a
+            >
+            and
+            <a
+                    href="https://scintillating-gingersnap-bc3585.netlify.app/"
+                    target="_blank"
+                    rel="noreferrer"
             >hosted on Netlify</a
-          >
-        </p>
-      </footer>
+            >
+          </p>
+        </footer>
+      </div>
     </div>
     <script src="src/index_5w.js"></script>
   </body>

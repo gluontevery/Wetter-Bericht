@@ -25,6 +25,30 @@ function htmlUpdateCity(cityName) {
   h1City.innerHTML = cityName;
 }
 
+function randomVideoBackground(){
+  let videoBackground = document.getElementById("video-background");
+  let fileNamesArray=[
+      "mist",
+      "mist2",
+      "snow1",
+      "snow2",
+      "sunshine",
+      "shiny",
+      "blitz",
+      "strong_rain",
+      "slight_rain",
+      "cloudy_rain",
+      "cloudy_thick",
+      "light_clouds",
+      "morning"
+  ];
+  let randomIndex=Math.round(Math.random()*12);
+  let videoFileName=fileNamesArray[randomIndex]+".mp4";
+  let videoHtml = `<source src="src/images/${videoFileName}" type="video/mp4" />`;
+
+  videoBackground.innerHTML = videoHtml;
+}
+
 function htmlUpdateDate() {
   let days = [
     "Sunday",
@@ -37,11 +61,32 @@ function htmlUpdateDate() {
   ];
   let now = new Date();
   let day = now.getDay();
+  //let hours = 6;
   let hours = now.getHours();
   let minutes = now.getMinutes();
   let currentWeather = document.querySelector(
     ".current-weather .current-details"
   );
+  let body = document.getElementById("global");
+
+  if (hours > 20 || hours < 5) {
+    body.style[
+      "background"
+    ] = `url("src/images/night_sky.jpg") no-repeat center fixed`;
+    body.style["background-size"] = `cover`;
+  } else if ((hours > 5 && hours < 7) || (hours > 18 && hours < 20)) {
+    body.style[
+      "background"
+    ] = `url("src/images/evening_sky.jpg") no-repeat center fixed`;
+    body.style["background-size"] = `cover`;
+  } else {
+    body.style[
+      "background"
+    ] = `url("src/images/day_sky.jpg") no-repeat center fixed`;
+    body.style["background-size"] = `cover`;
+  }
+
+  randomVideoBackground()
 
   if (hours < 10) {
     hours = `0${hours}`;
