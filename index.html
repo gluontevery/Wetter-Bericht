@@ -15,11 +15,14 @@
   </head>
   <body id="global">
     <div class="video-wrapper">
-      <video autoplay muted loop class="video-bkgd" id="video-background">
+      <!--<video autoplay muted loop class="video-bkgd" id="video-background">
         <source src="src/images/sky.mp4" type="video/mp4" />
-      </video>
+      </video>-->
       <div class="weather-app">
         <header>
+          <div class="city-main">
+            <h1 class="current-city">Paris</h1>
+          </div>
           <form id="search-form">
             <input
                     type="search"
@@ -33,16 +36,16 @@
         <main>
           <div class="current-weather" id="day-forecast">
             <div>
-              <h1 class="current-city">Paris</h1>
+              <span class="current-temperature-value" id="currentTemp">24</span
+              ><span class="current-temperature-unit">°C</span>
+              <img src="src/images/icons/sun100.png" class="current-temperature-icon">
               <p class="current-details">
-                Saturday 15:32, moderate rain <br />
-                Humidity: <strong>87%</strong>, Wind: <strong>7.2km/h</strong>
+                <span id="currentDate">Saturday 15:32</span><span id="weatherDescription">, moderate rain <br />
+                Humidity: <strong>87%</strong>, Wind: <strong>7.2km/h</strong></span>
               </p>
             </div>
-            <div class="current-temperature">
-            <span class="current-temperature-icon">☀️</span
-            ><span class="current-temperature-value" id="currentTemp">24</span
-            ><span class="current-temperature-unit">°C</span>
+            <div class="under-construction">
+              This section is under construction
             </div>
           </div>
         </main>
@@ -53,7 +56,7 @@
                     href="https://github.com/gluontevery"
                     target="_blank"
                     rel="noreferrer"
-            >T. Tatarchuk</a
+            >T.Tatarchuk</a
             >
             and is
             <a
