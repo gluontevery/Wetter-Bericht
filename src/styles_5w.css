@@ -76,16 +76,77 @@ main {
   padding: 30px 0;
 }
 
-.under-construction {
+.forecast {
   border: 2px solid #885df1;
   border-radius: 5px;
   padding: 15px;
-  min-width: 420px;
+  min-width: 480px;
   font-size: 120%;
+  margin-left: 15px;
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
-  height: 200px;
+}
+
+.day-forecast {
+  flex: 80px;
+}
+
+.day-forecast-name{
+  font-weight: bold;
+  color: #885df1;
+  margin-bottom: 10px;
+}
+
+.day-forecast-icon{
+  width: 60px;
+}
+
+.day-forecast-temperature{
+  font-size: 80%;
+  font-weight: bold;
+  color: #f65282;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.day-forecast-temp-realFeel {
+  opacity: 0.5;
+  position: relative;
+}
+
+.day-forecast-temp {
+  position: relative;
+}
+
+.tooltip {
+  visibility: hidden;
+  width: 120px;
+  background-color: dimgray;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.day-forecast-temp:hover .tooltip {
+  visibility: visible;
+}
+
+.day-forecast-temp-realFeel:hover .tooltip {
+  visibility: visible;
+}
+
+.icon-wrapper {
+  min-height: 80px;
 }
 
 .current-weather {
